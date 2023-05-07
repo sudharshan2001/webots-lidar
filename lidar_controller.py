@@ -5,8 +5,8 @@ import open3d as o3d
 import matplotlib.pyplot as plt
 
 def main(robot):
-    timestep = 32
-    max_speed = 6.28
+    timestep = 64
+    max_speed = 3.14
     
     lm = robot.getMotor('left wheel motor')
     rm = robot.getMotor('right wheel motor')
@@ -55,8 +55,8 @@ def main(robot):
         vis.poll_events()
         vis.update_renderer()
         
-        lm.setVelocity(max_speed*0.25)
-        rm.setVelocity(max_speed*0.25)
+        lm.setVelocity(max_speed*0.50)
+        rm.setVelocity(max_speed*0.50)
         
 if __name__ == "__main__":
     robot = Robot()
